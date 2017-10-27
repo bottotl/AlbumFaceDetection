@@ -27,7 +27,6 @@
     
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -46,11 +45,20 @@
     UIImage *originimage = info[@"UIImagePickerControllerOriginalImage"];
     if (originimage) {
         if ([self faceInside:[CIImage imageWithCGImage:originimage.CGImage] imageOrientation:originimage.imageOrientation]) {
-            NSLog(@"have people");
+            [self log:@"have people"];
         } else {
-            NSLog(@"no people");
+            [self log:@"no people"];
         }
     }
+}
+
+- (void)log:(NSString *)log {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"log" message:log
+                                                       delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    });
+    
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
@@ -72,6 +80,7 @@
     }
     return NO;
 }
+
 /// see http://www.tanhao.me/pieces/1019.html/
 - (NSNumber *)UIOrientationToCIOrientation:(UIImageOrientation)imageOrientation {
     switch (imageOrientation) {

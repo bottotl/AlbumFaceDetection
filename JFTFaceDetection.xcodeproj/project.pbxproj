@@ -13,6 +13,7 @@
 		30213C731FA30085003DDBFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30213C721FA30085003DDBFF /* Assets.xcassets */; };
 		30213C761FA30085003DDBFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30213C741FA30085003DDBFF /* LaunchScreen.storyboard */; };
 		30213C791FA30085003DDBFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30213C781FA30085003DDBFF /* main.m */; };
+		30213C811FA32D3F003DDBFF /* JFTPhotosLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 30213C801FA32D3F003DDBFF /* JFTPhotosLoader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		30213C751FA30085003DDBFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30213C771FA30085003DDBFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30213C781FA30085003DDBFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		30213C7F1FA32D3F003DDBFF /* JFTPhotosLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFTPhotosLoader.h; sourceTree = "<group>"; };
+		30213C801FA32D3F003DDBFF /* JFTPhotosLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFTPhotosLoader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				30213C741FA30085003DDBFF /* LaunchScreen.storyboard */,
 				30213C771FA30085003DDBFF /* Info.plist */,
 				30213C781FA30085003DDBFF /* main.m */,
+				30213C7F1FA32D3F003DDBFF /* JFTPhotosLoader.h */,
+				30213C801FA32D3F003DDBFF /* JFTPhotosLoader.m */,
 			);
 			path = JFTFaceDetection;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30213C811FA32D3F003DDBFF /* JFTPhotosLoader.m in Sources */,
 				30213C6E1FA30085003DDBFF /* ViewController.m in Sources */,
 				30213C791FA30085003DDBFF /* main.m in Sources */,
 				30213C6B1FA30085003DDBFF /* AppDelegate.m in Sources */,
