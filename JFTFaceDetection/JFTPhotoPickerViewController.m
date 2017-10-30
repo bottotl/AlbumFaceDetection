@@ -156,22 +156,22 @@
         cell.photoPreviewImageView.image = image;
         [cell setNeedsLayout];
     });
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-//        NSNumber *fileOrientation = info[@"PHImageFileOrientationKey"];
-//        long imageFileOrientation = fileOrientation.longValue;
-//        if (model.image.imageOrientation != imageFileOrientation) {
-//            NSLog(@"有问题");
-//        }
-//        if ([self faceInside:[CIImage imageWithCGImage:model.image.CGImage] imageOrientation:model.image.imageOrientation]) {
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//                cell.contentView.backgroundColor = [UIColor redColor];
-//            });
-//        } else {
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//                cell.contentView.backgroundColor = [UIColor whiteColor];
-//            });
-//        }
-//    });
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        NSNumber *fileOrientation = info[@"PHImageFileOrientationKey"];
+        long imageFileOrientation = fileOrientation.longValue;
+        if (model.image.imageOrientation != imageFileOrientation) {
+            NSLog(@"有问题");
+        }
+        if ([self faceInside:[CIImage imageWithCGImage:model.image.CGImage] imageOrientation:model.image.imageOrientation]) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                cell.contentView.backgroundColor = [UIColor redColor];
+            });
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                cell.contentView.backgroundColor = [UIColor whiteColor];
+            });
+        }
+    });
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
