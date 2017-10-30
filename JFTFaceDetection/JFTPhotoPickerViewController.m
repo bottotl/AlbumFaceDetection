@@ -121,6 +121,7 @@
 }
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+//// http://www.jianshu.com/p/8cf7593cc44d 滚动性能：缓存。这个点也可以提升性能。（暂时不考虑添加这个 feature，标记一下）
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     JFTPhotoModel *model = self.models[indexPath.row];
     PHImageRequestOptions *option = [PHImageRequestOptions new];
