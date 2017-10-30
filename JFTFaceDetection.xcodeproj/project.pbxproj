@@ -14,6 +14,8 @@
 		30213C761FA30085003DDBFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30213C741FA30085003DDBFF /* LaunchScreen.storyboard */; };
 		30213C791FA30085003DDBFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30213C781FA30085003DDBFF /* main.m */; };
 		30213C811FA32D3F003DDBFF /* JFTPhotosLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 30213C801FA32D3F003DDBFF /* JFTPhotosLoader.m */; };
+		30213C841FA34B4B003DDBFF /* JFTPhotoPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30213C831FA34B4B003DDBFF /* JFTPhotoPickerViewController.m */; };
+		30DFDE511FA3663200D6B0B1 /* JFTPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DFDE501FA3663200D6B0B1 /* JFTPhotoCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		30213C781FA30085003DDBFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		30213C7F1FA32D3F003DDBFF /* JFTPhotosLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFTPhotosLoader.h; sourceTree = "<group>"; };
 		30213C801FA32D3F003DDBFF /* JFTPhotosLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFTPhotosLoader.m; sourceTree = "<group>"; };
+		30213C821FA34B4B003DDBFF /* JFTPhotoPickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFTPhotoPickerViewController.h; sourceTree = "<group>"; };
+		30213C831FA34B4B003DDBFF /* JFTPhotoPickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFTPhotoPickerViewController.m; sourceTree = "<group>"; };
+		30DFDE4F1FA3663200D6B0B1 /* JFTPhotoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFTPhotoCollectionViewCell.h; sourceTree = "<group>"; };
+		30DFDE501FA3663200D6B0B1 /* JFTPhotoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFTPhotoCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,10 @@
 				30213C781FA30085003DDBFF /* main.m */,
 				30213C7F1FA32D3F003DDBFF /* JFTPhotosLoader.h */,
 				30213C801FA32D3F003DDBFF /* JFTPhotosLoader.m */,
+				30213C821FA34B4B003DDBFF /* JFTPhotoPickerViewController.h */,
+				30213C831FA34B4B003DDBFF /* JFTPhotoPickerViewController.m */,
+				30DFDE4F1FA3663200D6B0B1 /* JFTPhotoCollectionViewCell.h */,
+				30DFDE501FA3663200D6B0B1 /* JFTPhotoCollectionViewCell.m */,
 			);
 			path = JFTFaceDetection;
 			sourceTree = "<group>";
@@ -147,7 +157,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30DFDE511FA3663200D6B0B1 /* JFTPhotoCollectionViewCell.m in Sources */,
 				30213C811FA32D3F003DDBFF /* JFTPhotosLoader.m in Sources */,
+				30213C841FA34B4B003DDBFF /* JFTPhotoPickerViewController.m in Sources */,
 				30213C6E1FA30085003DDBFF /* ViewController.m in Sources */,
 				30213C791FA30085003DDBFF /* main.m in Sources */,
 				30213C6B1FA30085003DDBFF /* AppDelegate.m in Sources */,

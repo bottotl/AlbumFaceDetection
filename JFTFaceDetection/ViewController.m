@@ -8,28 +8,42 @@
 
 #import "ViewController.h"
 #import <Photos/Photos.h>
+#import "JFTPhotosLoader.h"
+#import "JFTPhotoPickerViewController.h"
 
 @interface ViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 @property (nonatomic, strong) CIContext *context;
 @property (nonatomic, strong) UIImagePickerController *picker;
+@property (nonatomic, strong) JFTPhotosLoader *photoLoader;
+@property (nonatomic, strong) NSArray <JFTPhotoModel *> *photoModels;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.photoLoader = [[JFTPhotosLoader alloc] init];
+    
     self.picker = [[UIImagePickerController alloc] init];
     self.picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     self.picker.delegate = self;
     
-    // Do any additional setup after loading the view, typically from a nib.
     self.context = [CIContext context];
     
 }
 
+- (IBAction)fetchAllImages:(id)sender {
+    self.photoModels = [self.photoLoader fetchModels];
+    NSLog(@"%d", self.photoModels.count);
+    JFTPhotoPickerViewController *photoList = [[JFTPhotoPickerViewController alloc] init];
+    [self.navigationController pushViewController:photoList animated:YES];
+}
+
+//- (void)findA
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)showImagePicker:(id)sender {
